@@ -1,0 +1,18 @@
+---
+description: Given/When/Then test cases and Playwright location for Brazos Ridge 101 demo
+alwaysApply: true
+---
+
+# QA test cases (Cursor 101 demo)
+
+When writing test cases from a story under `docs/stories/`:
+
+- Use `docs/test-cases/TEMPLATE.md` (TC-01 headings, Type, Priority, Source, Given, When, Then, Not in story, Open questions).
+- Include at least one Negative and one Boundary case per story set.
+- Only cite acceptance criteria that appear in the story file.
+
+When automating:
+
+- Add Playwright specs under `tests/e2e/*.spec.ts`.
+- Follow the style in `tests/e2e/search.spec.ts` and prefer `data-testid` selectors.
+- If automation fails, treat the product defect as suspect before weakening the test.
