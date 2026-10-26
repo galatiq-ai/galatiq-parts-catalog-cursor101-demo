@@ -1,0 +1,17 @@
+{
+  "name": "galatiq-parts-catalog-cursor101-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Brazos Ridge Electronics Cursor 101 training catalog (illustrative sample data)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test:e2e": "playwright test",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}

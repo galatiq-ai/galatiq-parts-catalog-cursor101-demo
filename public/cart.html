@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart — Brazos Ridge Electronics</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="cart">
+    <header class="site-header">
+      <div>
+        <div class="brand">Brazos Ridge Electronics</div>
+        <div class="sample-note">Illustrative sample catalog for training</div>
+      </div>
+      <nav class="nav-links">
+        <a href="/index.html">Catalog</a>
+        <a href="/cart.html" data-testid="nav-cart">Cart</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h1>Cart</h1>
+        <div id="cart-lines" data-testid="cart-lines"></div>
+        <p id="cart-empty" class="empty hidden" data-testid="cart-empty">Your cart is empty.</p>
+        <button type="button" class="secondary" id="clear-cart" data-testid="clear-cart">Clear cart</button>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

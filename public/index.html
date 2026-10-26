@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catalog — Brazos Ridge Electronics</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="catalog">
+    <header class="site-header">
+      <div>
+        <div class="brand">Brazos Ridge Electronics</div>
+        <div class="sample-note">Illustrative sample catalog for training</div>
+      </div>
+      <nav class="nav-links">
+        <a href="/index.html">Catalog</a>
+        <a href="/cart.html" data-testid="nav-cart">Cart</a>
+      </nav>
+    </header>
+
+    <main class="layout catalog-layout">
+      <section class="panel" aria-label="Filters">
+        <h1>Search catalog</h1>
+        <div class="field">
+          <label for="search-input">Search</label>
+          <input id="search-input" data-testid="search-input" type="search" placeholder="Part number or keyword" />
+        </div>
+        <div class="field">
+          <label for="category-filter">Category</label>
+          <select id="category-filter" data-testid="category-filter">
+            <option value="all">All categories</option>
+            <option value="passives">Passives</option>
+            <option value="semiconductors">Semiconductors</option>
+            <option value="connectors">Connectors</option>
+            <option value="sensors">Sensors</option>
+            <option value="optoelectronics">Optoelectronics</option>
+            <option value="power">Power</option>
+            <option value="electromechanical">Electromechanical</option>
+            <option value="timing">Timing</option>
+          </select>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="in-stock-only" data-testid="in-stock-only" />
+          In stock only
+        </label>
+        <div class="field">
+          <label for="max-lead-time">Max lead time</label>
+          <select id="max-lead-time" data-testid="max-lead-time">
+            <option value="any">Any</option>
+            <option value="2">2 weeks or less</option>
+            <option value="4">4 weeks or less</option>
+            <option value="8">8 weeks or less</option>
+            <option value="12">12 weeks or less</option>
+          </select>
+        </div>
+        <button type="button" class="secondary" id="clear-filters" data-testid="clear-filters">Clear filters</button>
+      </section>
+
+      <section class="panel" aria-label="Results">
+        <p class="status" id="results-status" data-testid="results-status" aria-live="polite">Loading…</p>
+        <p id="no-results" class="empty hidden" data-testid="no-results">No parts match your filters</p>
+        <div class="table-wrap">
+          <table data-testid="results-table">
+            <thead>
+              <tr>
+                <th>Part</th>
+                <th>Description</th>
+                <th>Stock</th>
+                <th>Lead time</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="results-body" data-testid="results-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
